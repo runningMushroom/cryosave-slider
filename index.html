@@ -16,7 +16,7 @@
 
     <h1 class="text-center pt-3 pb-3">
       <span class="page-header">
-        GET <span class="page-header-focus text-primary">FINANCE</span> TODAY
+        GET <span class="page-header-focus text-primary">FINANCED</span> TODAY
       </span>
     </h1>
     <div class="container primary mt-5">
@@ -25,25 +25,24 @@
         <div class="requirements p-4">
           <h1>What You Need</h1>
           <div class="d-flex flex-row pb-2 align-items-center">
-            <img src="./icon/smartphone.svg" alt="smartphone icon" width="42px"
-              />
-            <p class="m-0 pl-2 requirement-text">Mobile Number</p>
+            <img src="./icon/smartphone.svg" alt="smartphone icon" width="42px"/>
+            <p class="m-0 pl-4 requirement-text">Mobile Number</p>
           </div>
 
           <div class="d-flex flex-row pb-2 align-items-center">
             <img src="./icon/id-card.svg" alt="smartphone icon" width="42px" />
-            <p class="m-0 pl-2 requirement-text">Copy of RSA ID</p>
+            <p class="m-0 pl-4 requirement-text">Copy of RSA ID</p>
           </div>
 
           <div class="d-flex flex-row pb-2 align-items-center">
             <img src="./icon/safe-box.svg" alt="smartphone icon" width="42px" />
-            <p class="m-0 pl-2 requirement-text">Bank Account</p>
+            <p class="m-0 pl-4 requirement-text">Bank Account</p>
           </div>
 
           <div class="d-flex flex-row align-items-center">
             <img src="./icon/statement.svg" alt="smartphone icon" width="42px"
               />
-            <p class="m-0 pl-2 requirement-text">3 Months Bank Statements</p>
+            <p class="m-0 pl-4 requirement-text">3 Months Bank Statements</p>
           </div>
         </div>
 
@@ -55,7 +54,7 @@
                 <p class="m-0">R <span id='amountDsiplay'></span></p>
               </div>
               <input id='amount' type="range" class="slider" min='1000' max='30000'
-                value='25000' step='1000' />
+                value='25000' step='1000' type="number" />
             </div>
 
             <div class="pl-5 pr-5">
@@ -63,16 +62,28 @@
                 <p class="m-0">Term</p>
                 <p class="m-0"><span id='termDsiplay'></span> Months</p>
               </div>
-              <input id='term' type="range" class="slider" min='6' max='36' value='24'
-                step='1' />
+              <input id='term' type="range" class="slider" min='1' max='36' value='24'
+                step='1' type="number"/>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="d-flex justify-content-center mt-5">
+        <div class="text-center">
+          <p class="installment-container">R
+            <span id="monthlyInstallment"></span> pm
+          </p>
+
+          <button class="btn btn-primary">
+            Apply Now
+          </button>
+        </div>
+      </div>
+      
+
     </div>
 
-    <div>contact form</div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
