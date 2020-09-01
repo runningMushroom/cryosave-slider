@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      maximum-scale=5, minimal-ui">
+    <meta name="Description" content="Uloans lending portal.">
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href='./css.css'>
+  </head>
+  <body>
+
+    <h1 class="text-center pt-3 pb-3">
+      <span class="page-header">
+        GET <span class="page-header-focus text-primary">FINANCE</span> TODAY
+      </span>
+    </h1>
+    <div class="container primary mt-5">
+
+      <div class="slider-container d-flex flex-row">
+        <div class="requirements p-4">
+          <h1>What You Need</h1>
+          <div class="d-flex flex-row pb-2 align-items-center">
+            <img src="./icon/smartphone.svg" alt="smartphone icon" width="42px"
+              />
+            <p class="m-0 pl-2 requirement-text">Mobile Number</p>
+          </div>
+
+          <div class="d-flex flex-row pb-2 align-items-center">
+            <img src="./icon/id-card.svg" alt="smartphone icon" width="42px" />
+            <p class="m-0 pl-2 requirement-text">Copy of RSA ID</p>
+          </div>
+
+          <div class="d-flex flex-row pb-2 align-items-center">
+            <img src="./icon/safe-box.svg" alt="smartphone icon" width="42px" />
+            <p class="m-0 pl-2 requirement-text">Bank Account</p>
+          </div>
+
+          <div class="d-flex flex-row align-items-center">
+            <img src="./icon/statement.svg" alt="smartphone icon" width="42px"
+              />
+            <p class="m-0 pl-2 requirement-text">3 Months Bank Statements</p>
+          </div>
+        </div>
+
+        <div class="sliders flex-grow-1 p-4">
+          <div class="d-flex flex-column justify-content-around h-100">
+            <div class="pl-5 pr-5">
+              <div class="d-flex justify-content-between slider-header">
+                <p class="m-0">Amount</p>
+                <p class="m-0">R <span id='amountDsiplay'></span></p>
+              </div>
+              <input id='amount' type="range" class="slider" min='1000' max='30000'
+                value='25000' step='1000' />
+            </div>
+
+            <div class="pl-5 pr-5">
+              <div class="d-flex justify-content-between slider-header">
+                <p class="m-0">Term</p>
+                <p class="m-0"><span id='termDsiplay'></span> Months</p>
+              </div>
+              <input id='term' type="range" class="slider" min='6' max='36' value='24'
+                step='1' />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div>contact form</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+  </body>
+</html>

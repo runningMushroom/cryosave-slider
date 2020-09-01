@@ -1,0 +1,30 @@
+body {
+  background-image: url(./pictures/bg-blue-medical.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-header {
+  font-size: 2em;
+}
+
+.slider-container {
+  border-radius: 18px;
+  /* background-color: rgb(179, 179, 228); */
+  /* background-image: url(./pictures/glass-plate.png); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.requirement-text {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+
+.slider {
+  width: 100%;
+}
+.slider-header {
+  font-size: 1.4em;
+  font-weight: 700;
+}
