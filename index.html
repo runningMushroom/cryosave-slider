@@ -10,6 +10,8 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href='./css.css'>
   </head>
   <body>
@@ -21,67 +23,157 @@
     </h1>
     <div class="container primary mt-5">
 
-      <div class="slider-container d-flex flex-row">
-        <div class="requirements p-4">
-          <h1>What You Need</h1>
-          <div class="d-flex flex-row pb-2 align-items-center">
-            <img src="./icon/smartphone.svg" alt="smartphone icon" width="42px"/>
-            <p class="m-0 pl-4 requirement-text">Mobile Number</p>
-          </div>
-
-          <div class="d-flex flex-row pb-2 align-items-center">
-            <img src="./icon/id-card.svg" alt="smartphone icon" width="42px" />
-            <p class="m-0 pl-4 requirement-text">Copy of RSA ID</p>
-          </div>
-
-          <div class="d-flex flex-row pb-2 align-items-center">
-            <img src="./icon/safe-box.svg" alt="smartphone icon" width="42px" />
-            <p class="m-0 pl-4 requirement-text">Bank Account</p>
-          </div>
-
-          <div class="d-flex flex-row align-items-center">
-            <img src="./icon/statement.svg" alt="smartphone icon" width="42px"
-              />
-            <p class="m-0 pl-4 requirement-text">3 Months Bank Statements</p>
-          </div>
-        </div>
-
-        <div class="sliders flex-grow-1 p-4">
-          <div class="d-flex flex-column justify-content-around h-100">
-            <div class="pl-5 pr-5">
-              <div class="d-flex justify-content-between slider-header">
-                <p class="m-0">Amount</p>
-                <p class="m-0">R <span id='amountDsiplay'></span></p>
+      <div id='pageOne' class="shadow">
+        <div class="slider-container d-flex flex-row">
+          <div class="requirements">
+            <h1 class="mb-0">What You Need</h1>
+            <div class="icon-container">
+              <div class="d-flex flex-row pb-4 align-items-center">
+                <img src="./icon/smartphone.svg" alt="smartphone icon" width="42px"/>
+                <p class="m-0 pl-4 requirement-text">Mobile Number</p>
               </div>
-              <input id='amount' type="range" class="slider" min='1000' max='30000'
-                value='25000' step='1000' type="number" />
-            </div>
-
-            <div class="pl-5 pr-5">
-              <div class="d-flex justify-content-between slider-header">
-                <p class="m-0">Term</p>
-                <p class="m-0"><span id='termDsiplay'></span> Months</p>
+  
+              <div class="d-flex flex-row pb-4 align-items-center">
+                <img src="./icon/id-card.svg" alt="smartphone icon" width="42px" />
+                <p class="m-0 pl-4 requirement-text">Copy of RSA ID</p>
               </div>
-              <input id='term' type="range" class="slider" min='1' max='36' value='24'
-                step='1' type="number"/>
+  
+              <div class="d-flex flex-row pb-4 align-items-center">
+                <img src="./icon/safe-box.svg" alt="smartphone icon" width="42px" />
+                <p class="m-0 pl-4 requirement-text">Bank Account</p>
+              </div>
+  
+              <div class="d-flex flex-row pb-4 align-items-center">
+                <img src="./icon/statement.svg" alt="smartphone icon" width="42px"/>
+                <p class="m-0 pl-4 requirement-text">3 Months Bank Statements</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="d-flex justify-content-center mt-5">
-        <div class="text-center">
-          <p class="installment-container">R
-            <span id="monthlyInstallment"></span> pm
-          </p>
+          <div class="sliders flex-grow-1 p-4">
+            <div class="d-flex flex-column justify-content-around h-100">
+              <div class="pl-5 pr-5">
+                <div class="d-flex justify-content-between slider-header">
+                  <p class="m-0">Amount</p>
+                  <p class="m-0">R <span id='amountDsiplay'></span></p>
+                </div>
+                <input id='amount' type="range" class="slider" min='1000' max='75000'
+                  value='25000' step='1000' type="number" />
+              </div>
 
-          <button class="btn btn-primary">
-            Apply Now
-          </button>
+              <div class="pl-5 pr-5">
+                <div class="d-flex justify-content-between slider-header">
+                  <p class="m-0">Term</p>
+                  <p class="m-0"><span id='termDsiplay'></span> Months</p>
+                </div>
+                <input id='term' type="range" class="slider" min='36' max='60' value='48'
+                  step='1' type="number"/>
+              </div>
+
+              <div class="d-flex justify-content-center">
+                <div class="text-center installment">
+                  <p class="installment-container">R
+                    <span id="monthlyInstallment"></span> pm
+                  </p>
+      
+                  <button id='applyNow' class="btn btn-primary">
+                    Apply Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        
       </div>
       
+      <div id='pageTwo' class="mt-3 mb-4">
+        <h2 class="text-center mb-4">When can we contact you?</h2>
+        
+        <div class="row">
+          <div class="col-6 offset-3">
+            
+            <form id='contactForm'>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon_name">
+                    <i id='icon_name' class="material-icons md-34">account_circle</i>
+                  </span>
+                </div>
+                <input id='input_name' type="text" class="form-control form-control-lg" 
+                  placeholder="Name & Surname" aria-label="Name"
+                >
+              </div>
 
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon_phone">
+                    <i id='icon_phone' class="material-icons md-34">phone_iphone</i>
+                  </span>
+                </div>
+                <input id='input_phone' type="text" class="form-control form-control-lg" 
+                  placeholder="Contact Number" aria-label="Name"
+                >
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text inp_group" id="addon_email">
+                    <i id='icon_email' class="material-icons md-34">email</i>
+                  </span>
+                </div>
+                <input id='input_email' type="text" class="form-control form-control-lg" 
+                  placeholder="Email Address" aria-label="Name"
+                >
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="input_time" id="addon_time">
+                    <i id='icon_time' class="material-icons md-34">watch</i>
+                  </label>
+                </div>
+                <select id="input_time" class="form-control form-control-lg">
+                  <option selected disabled>When should we call you?</option>
+                  <option value="ASAP">ASAP</option>
+                  <option value="08:00 - 09:00">08:00 - 09:00</option>
+                  <option value="09:00 - 10:00">09:00 - 10:00</option>
+                  <option value="10:00 - 11:00">10:00 - 11:00</option>
+                  <option value="11:00 - 12:00">11:00 - 12:00</option>
+                  <option value="12:00 - 13:00">12:00 - 13:00</option>
+                  <option value="13:00 - 14:00">13:00 - 14:00</option>
+                  <option value="14:00 - 15:00">14:00 - 15:00</option>
+                  <option value="15:00 - 16:00">15:00 - 16:00</option>
+                  <option value="16:00 - 17:00">16:00 - 17:00</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id='addon_comments'>
+                    <i id='icon_comments' class="material-icons md-34">mode_comment</i>
+                  </span>
+                </div>
+                <textarea id='input_comments' class="form-control form-control-lg" rows="4"
+                  placeholder='Comments' aria-label="With textarea"></textarea>
+              </div>
+
+              <div class="text-center p-3">
+                <button id='applyNow' class="btn btn-primary">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+      <div id='pageThree' class="mt-3 mb-4 shadow">
+        <h1>Thank you very much!!!</h1>
+        <h2>One of our friendly staff memebers will get in touch shortly</h2>
+      </div>
     </div>
 
 

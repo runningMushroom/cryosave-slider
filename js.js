@@ -1,5 +1,6 @@
 $(document).ready(function () {
   updateAmounts()
+
 });
 
 // Amount on change, input event
@@ -29,8 +30,6 @@ function montlyInstalment() {
   return PMT(interestRate, term, -(capitalizedAmount)) + insurance + serviceFee
 }
 
-
-
 function PMT(rate, nper, pv, fv, type) {
   if (!fv) fv = 0;
   if (!type) type = 0;
@@ -46,3 +45,43 @@ function PMT(rate, nper, pv, fv, type) {
 
   return pmt;
 }
+
+let amount  = 0,
+    term    = 0;
+
+$('#applyNow').on('click', () => {
+  amount = $('#amount').val()
+  term = $('#term').val()
+
+  // hide first page
+  $('#pageOne').css('display', 'none')
+  $('#pageTwo').css('display', 'block')
+});
+
+// turn on input icon on focus
+$("[id^=input_]").on('focus', e => { 
+  $('#icon_' + e.target.id.split('_')[1])
+    .css('color', '#00aaff')
+});
+$("[id^=input_]").on('focusout', e => {
+  $('#icon_' + e.target.id.split('_')[1])
+    .css('color', '#6b6b6bb6')
+});
+
+
+$( "#contactForm" ).submit(e => {
+  e.preventDefault();
+  let formData = {
+    amount: amount,
+    term: term,
+    name: $('#input_name').val(),
+    number: $('#input_phone').val(),
+    email: $('#input_email').val(),
+    time: $('#input_time').val(),
+    comments: $('#input_comments').val(),
+  }
+
+  $( "#contactForm" ).trigger("reset")
+  $('#pageTwo').css('display', 'none')
+  $('#pageThree').css('display', 'block')
+});
